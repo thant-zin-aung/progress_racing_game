@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox fx:id="bottomContainer" alignment="CENTER" layoutY="560.0" prefHeight="100.0" prefWidth="900.0" spacing="60.0">
+         <children>
+            <JFXButton fx:id="startButton" onAction="#pressStartButton" prefHeight="79.0" prefWidth="189.0" style="-fx-background-color: purple;" text="Start Game" textFill="WHITE">
+               <font>
+                  <Font name="Brush Script MT Italic" size="34.0" />
+               </font>
+            </JFXButton>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="267.0" spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="p1Name" labelFloat="true" promptText="Enter player one name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></JFXTextField>
+                  <JFXColorPicker fx:id="p1Color" prefHeight="26.0" prefWidth="267.0">
+                     <effect>
+                        <DropShadow color="#00b8f5" />
+                     </effect>
+                  </JFXColorPicker>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="339.0" layoutY="10.0" prefHeight="100.0" prefWidth="267.0" spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="p2Name" labelFloat="true" promptText="Enter player two name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></JFXTextField>
+                  <JFXColorPicker fx:id="p2Color" prefHeight="26.0" prefWidth="267.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></HBox>
+      <HBox layoutX="4.0" layoutY="556.0" prefHeight="3.0" prefWidth="900.0" style="-fx-background-color: #808B96;" />
+      <Line endX="173.20001220703125" endY="5.7220458984375E-6" layoutX="446.0" layoutY="118.0" startX="-158.00003051757812" startY="5.7220458984375E-6" />
+      <Line endX="173.20001220703125" endY="5.7220458984375E-6" layoutX="446.0" layoutY="539.0" startX="-158.00003051757812" startY="5.7220458984375E-6" />
+      <ProgressBar fx:id="p1Progress" layoutX="151.0" layoutY="278.0" prefHeight="100.0" prefWidth="420.0" progress="0.03" rotate="-90.0" />
+      <ProgressBar fx:id="p2Progress" layoutX="336.0" layoutY="278.0" prefHeight="100.0" prefWidth="420.0" progress="0.03" rotate="-90.0" />
+      <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blacksky Progress Game" underline="true" wrappingWidth="672.5367660522461">
+         <font>
+            <Font name="French Script MT" size="64.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#f80a65" offset="0.007633587786259542" />
+                  <Stop color="#032bbd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Label fx:id="p1Label" alignment="CENTER" layoutX="19.0" layoutY="232.0" prefHeight="142.0" prefWidth="267.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#f80a65" offset="0.007633587786259542" />
+                  <Stop color="#032bbd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="p2Label" alignment="CENTER" layoutX="620.0" layoutY="232.0" prefHeight="142.0" prefWidth="267.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#f80a65" offset="0.007633587786259542" />
+                  <Stop color="#032bbd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Text fx:id="goText" layoutX="433.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GO!">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.4847327880276978" endY="0.8129771069715951" startX="0.2862595510846786" startY="0.4465648600163351">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#f80a65" offset="0.007633587786259542" />
+                  <Stop color="#032bbd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>
